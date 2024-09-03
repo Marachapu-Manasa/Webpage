@@ -3,9 +3,81 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Card</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bungee+Tint&family=New+Amsterdam&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=New+Amsterdam&display=swap" rel="stylesheet">
+    <title>Id Card</title>
+    <style>
+        body{
+            background-color: black;
+        }
+        .card{
+            background-color: white;
+            width: 300px;
+            padding: 10PX;
+            text-align: center;
+            border: 2px solid rgb(194, 188, 188);
+            margin: 10px auto;
+            position: relative;
+            top: 80px;
+            border-radius: 12px;
+        }
+        .card-title{
+            margin-top: 1px;
+            font-size: 32px;
+            font-family: "New Amsterdam", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+        }
+        .card-img{
+            width: 200px;
+            border-radius: 50%;
+            margin-top: -10px;
+        }
+        .name{
+            font-family: "Bungee Tint", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            font-size: 25px;
+            margin-top: 10px;
+        }
+        .roll{
+            font-size: 25px;
+            font-family: "New Amsterdam", sans-serif;
+            font-weight: 400;
+            font-style: normal;
+            margin-top: -20px;
+        }
+        .barcode{
+            width: 130px;
+            top: 180px;
+            right: -30px;
+            position: absolute;
+            transform: rotate(90deg);
+        }
+        .btn{
+            background-color: black;
+            color: white;
+            padding: 3px 15px;
+
+            position: absolute;
+            top: 50px;
+            left: 0;
+        }
+    </style>
 </head>
 <body>
-    <h1>Welcome To Page</h1>
+    <div class="card">
+        <H2 class="card-title">PRAKASAM ENGINEERING COLLEGE</H2>
+        <img src="https://img.freepik.com/premium-vector/professional-design-background-business-vector-illustration-banner-office-card-concept-day_1013341-249523.jpg?semt=ais_hybrid" alt="" class="card-img">
+        <img src="data:image/gif;base64,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" alt="" class="barcode">
+        <h3 class="name">Marachapu-Manasa
+        </h3>
+        <h3 class="roll">21F91A46</h3>
+        <button class="btn">R20</button>
+    </div>
 </body>
 </html>
